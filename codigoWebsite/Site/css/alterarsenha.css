@@ -1,0 +1,13 @@
+body {
+  background-color:#1B1F26;
+}
+
+#title {
+  padding-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding-top: 50px;
+}

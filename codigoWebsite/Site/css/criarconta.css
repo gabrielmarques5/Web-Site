@@ -1,0 +1,24 @@
+.container {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 3%;
+}
+
+#cancelar {
+    margin-top: 5%;
+    margin-right: 60%;
+}
+
+#registrar {
+    margin-top: 5%;
+}
+
+#modal {
+    border-color: white;
+}
+
+
+#pesquisa {
+    color: white;
+}
+

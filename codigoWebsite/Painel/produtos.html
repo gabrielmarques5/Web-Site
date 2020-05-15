@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Mundos dos Games</title>
+    <link href="css/produtos.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #1B1F26;">
+    <!-- Navbar -->
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark">
+            <div class="row">
+                <div class="col">
+                    <a class="navbar-brand" href="../Site/index.html">
+                        <img src="./img/logo.png" height="60" width="60" alt="logo">
+                    </a>
+                </div>
+                <a class="navbar-brand" href="../Site/index.html">
+                    <p id="name">Mundo dos Games</p>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="collapse" id="navbarNav">
+            <div class="p-4">
+                <img src="./img/home.png" width="30" height="30" alt="Home">
+                <a href="#" style="color: white;" onclick="Home()">Página Inicial</a>
+            </div>
+            <div class="p-4">
+                <img src="./img/vendas.png" width="30" height="30" alt="Vendas">
+                <a href="#" style="color: white;" onclick="Vendas()">Vendas</a>
+            </div>
+            <div class="p-4">
+                <img src="./img/produto.png" width="30" height="30" alt="Produtos">
+                <a href="#" style="color: #1B1F26;" onclick="Produtos()">Produtos</a>
+            </div>
+            <div class="p-4">
+                <a href="#" style="color: white; margin-left: 30px;" onclick="addProdutos()">Adicionar Produtos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Titulo -->
+    <h1 id="titulo">Produtos</h1>
+
+    <!-- Tabela -->
+    <div class="text-center">
+        <button type="submit" class="btn btn-secondary" style="background-color: #7892AB" onclick="getProducts()">Listar Produtos</button>
+    </div>
+    <table class="table tabelaUsuarios">
+        <thead>
+            <tr>
+                <th id="barra" scope="col">Nome</th>
+                <th id="barra" scope="col">Lançamento</th>
+                <th id="barra" scope="col">Desenvolvedor</th>
+                <th id="barra" scope="col">Distribuidor</th>
+                <th id="barra" scope="col">Categoria</th>
+                <th id="barra" scope="col">Modo do Jogo</th>
+                <th id="barra" scope="col">Consoles</th>
+                <th id="barra" scope="col">Preço</th>
+                <th id="barra" scope="col">Estoque</th>
+                <th id="barra" scope="col">SKU</th>
+                <th id="barra" scope="col">Atualizar</th>
+                <th id="barra" scope="col">Deletar</th>
+            </tr>
+        </thead>
+        <tbody id="nossosProdutos" style="color: white;">
+
+        </tbody>
+    </table>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/navbar.js"></script>
+    <script src="../MundoDosGamesAPI/appsJS/appProduct.js"></script>
+</body>
+
+</HTML>

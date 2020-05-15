@@ -1,0 +1,27 @@
+#img {
+    justify-content: center;
+    margin-left: 38%;
+}
+
+#name {
+    font-family: 'Press Start 2P';
+    color: #fff;
+}
+
+body {
+    background: #1B1F26;
+}
+
+.textEntrar {
+    color: #fff;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.container {
+    padding-top: 100px;
+}
+
+.label {
+    color: #fff;
+}

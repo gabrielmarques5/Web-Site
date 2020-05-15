@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Administrativo | Mundos dos Games</title>
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/addProduto.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- CSS Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #1B1F26;">
+    <!-- Navbar -->
+    <div class="pos-f-t">
+        <nav class="navbar navbar-dark">
+            <div class="row">
+                <div class="col">
+                    <a class="navbar-brand" href="../Site/index.html">
+                        <img src="./img/logo.png" height="60" width="60" alt="logo">
+                    </a>
+                </div>
+                <a class="navbar-brand" href="../Site/index.html">
+                    <p id="name">Mundo dos Games</p>
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
+        <div class="collapse" id="navbarNav">
+            <div class="p-4">
+                <img src="./img/home.png" width="30" height="30" alt="Home">
+                <a href="#" style="color: white;" onclick="Home()">Página Inicial</a>
+            </div>
+            <div class="p-4">
+                <img src="./img/vendas.png" width="30" height="30" alt="Vendas">
+                <a href="#" style="color: white;" onclick="Vendas()">Vendas</a>
+            </div>
+            <div class="p-4">
+                <img src="./img/produto.png" width="30" height="30" alt="Produtos">
+                <a href="#" style="color: #1B1F26;" onclick="Produtos()">Produtos</a>
+            </div>
+            <div class="p-4">
+                <a href="#" style="color: #1B1F26; margin-left: 30px;" onclick="addProdutos()">Adicionar Produtos</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Titulo -->
+    <div class="form-group">
+        <h1 id="titulo">Adicionar Produtos</h1>
+    </div>
+
+    <!-- Formulario para adicionar produtos -->
+    <div class="container">
+        <form class="form" onsubmit="registerProduct(event, this)">
+            <div class="form-group">
+                <h3>Fotos do Produto</h3>
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" accept="image/*" id="image" name="image">
+                    <label class="custom-file-label" for="image">Escolha uma foto</label>
+                </div>
+                <div class="custom-file" style="margin-top: 20px;">
+                    <input type="file" class="custom-file-input" accept="image/*" id="image" name="image">
+                    <label class="custom-file-label" for="image">Escolha uma foto</label>
+                </div>
+                <div class="custom-file" style="margin-top: 20px;">
+                    <input type="file" class="custom-file-input" accept="image/*" id="image" name="image">
+                    <label class="custom-file-label" for="image">Escolha uma foto</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="title">Nome do Jogo</label>
+                    <input type="text" class="form-group form-control" id="title" name="title" placeholder="Jogo">
+                </div>
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="launch">Lançamento</label>
+                    <input type="date" class="form-group form-control" id="launch" name="launch"
+                        placeholder="Lançamento">
+                </div>
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="developer">Desenvolvedor</label>
+                    <input type="text" class="form-group form-control" id="developer" name="developer"
+                        placeholder="Desenvolvedor">
+                </div>
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="distributor">Distribuidor</label>
+                    <input type="text" class="form-group form-control" id="distributor" name="distributor"
+                        placeholder="Distribuidor">
+                </div>
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="category">Categoria/Gênero</label>
+                    <input type="text" class="form-group form-control" id="category" name="category"
+                        placeholder="Categoria/Gênero">
+                </div>
+                <div class="form-group justify-content-center col-md-6">
+                    <label class="label" for="gameMode">Modo de Jogo</label>
+                    <input type="text" class="form-group form-control" id="gameMode" name="gameMode"
+                        placeholder="Modo de Jogo">
+                </div>
+                <div class="form-group justify-content-center col-md-12">
+                    <label class="labelDescricao" for="description">Descrição</label>
+                    <textarea class="form-group form-control" id="description" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-group justify-content-center col-md-3">
+                    <label class="labelMenor" for="price">Preço</label>
+                    <input type="number" class="form-group form-control" id="price" name="price" placeholder="Preço">
+                </div>
+                <div class="form-group justify-content-center col-md-3">
+                    <label class="labelMenor" for="amount">Quantidade</label>
+                    <input type="number" class="form-group form-control" id="amount" name="amount"
+                        placeholder="Quantidade">
+                </div>
+                <div class="form-group justify-content-center col-md-3">
+                    <label class="labelMenor" for="sku">SKU</label>
+                    <input type="text" class="form-group form-control" id="sku" name="sku" placeholder="SKU">
+                </div>
+                <div class="form-group justify-content-center col-md-3">
+                    <label class="labelMenor" for="consoles">Consoles</label>
+                    <input type="text" class="form-group form-control" id="consoles" name="consoles"
+                        placeholder="Consoles">
+                </div>
+            </div>
+            <div class="form-group justify-content-center" style="margin-top: 20px;">
+                <button class="btn btn-secondary" type="submit" style="background-color: #7892AB">Salvar</button>
+                <button class="btn btn-secondary" style="background-color: #7892AB"
+                    onclick="Cancelar()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/addProduto.js"></script>
+    <script src="../MundoDosGamesAPI/appsJS/appProduct.js"></script>
+</body>
+
+</HTML>

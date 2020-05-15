@@ -1,0 +1,28 @@
+body {
+  background-color: #1B1F26;
+}
+
+#title {
+  color: white;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+.label {
+  color: white;
+}
+
+#button {
+  color: white;
+  background-color: #7892AB;
+  margin-top: 10px;
+}
+
+#pesquisa {
+  color: white;
+}
+

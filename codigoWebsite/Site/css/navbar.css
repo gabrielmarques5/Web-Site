@@ -1,0 +1,26 @@
+/* Navbar */
+
+nav {
+    background-color: #1C4859;
+}
+
+.navbar-nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Brand */
+
+#imgBrand {
+    width: 60px;
+    height: 60px;
+}
+
+#cart {
+    width: 30px;
+    height: 30px;
+}
+
+#textBrand {
+    font-family: 'Press Start 2P', cursive;
+}
