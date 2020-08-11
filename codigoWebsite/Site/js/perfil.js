@@ -1,3 +1,3 @@
 function alterarsenha() {
-    window.location.href= "alterarsenha.html"
+    window.location.href= "alterarSenha.html"
   }

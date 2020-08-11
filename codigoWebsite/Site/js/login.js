@@ -1,5 +1,5 @@
 function criarConta() {
-    window.location.href= "criarconta.html"
+    window.location.href= "criarConta.html"
 }
 
 function entrar() {
